@@ -1,0 +1,306 @@
+.invoicePage {
+    font-family: Arial, sans-serif;
+    padding: 16px;
+    color: #111;
+}
+
+.invoiceTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.invoiceTitle {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.invoiceActions {
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    padding: 8px 12px;
+    border: 1px solid #111;
+    background: #111;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.btn.ghost {
+    background: #fff;
+    color: #111;
+}
+
+.btn.full {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.err {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #f3b3b3;
+    background: #fff4f4;
+    color: #900;
+    border-radius: 8px;
+}
+
+.invoiceGrid {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 14px;
+    align-items: start;
+}
+
+/* Controls (Excel-like box) */
+.controlsBox {
+    border: 1px solid #cfcfcf;
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.ctrlRow {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.ctrlLabel {
+    font-weight: 700;
+    font-size: 14px;
+    text-align: right;
+    padding-right: 6px;
+}
+
+.ctrlInput {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px 8px;
+    border: 1px solid #9a9a9a;
+    background: #fff;
+    border-radius: 4px;
+}
+
+/* Preview area */
+.previewBox {
+    border: 1px solid #cfcfcf;
+    background: #fff;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.empty {
+    padding: 16px;
+    color: #666;
+    border: 1px dashed #ccc;
+    border-radius: 6px;
+}
+
+/* Header bar */
+.serviceHeader {
+    background: #000;
+    color: #fff;
+    display: grid;
+    grid-template-columns: 240px 1fr 260px;
+    gap: 12px;
+    align-items: center;
+    padding: 12px;
+    margin-bottom: 10px;
+}
+
+.serviceHeaderLeft {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logoImg {
+    max-height: 80px;
+    object-fit: contain;
+}
+
+.serviceHeaderCenter {
+    text-align: center;
+}
+
+.serviceTitle {
+    font-size: 34px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+}
+
+.serviceClient {
+    margin-top: 6px;
+    color: #ffd800;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+.serviceEmail {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.serviceHeaderRight {
+    text-align: right;
+    font-size: 13px;
+    line-height: 1.25;
+}
+
+.serviceCompany {
+    font-weight: 900;
+    margin-bottom: 4px;
+}
+
+/* Date Range row */
+.dateRangeRow {
+    display: grid;
+    grid-template-columns: 260px 160px 80px 160px;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 14px;
+    margin-bottom: 8px;
+}
+
+.dateRangeLabel {
+    font-size: 34px;
+    font-weight: 900;
+    text-align: right;
+}
+
+.dateRangeVal {
+    font-size: 26px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.dateRangeArrow {
+    font-size: 34px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.whiteSpacer {
+    height: 26px;
+}
+
+/* Table */
+.gridTableWrap {
+    overflow: auto;
+}
+
+.gridTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.gridTable th,
+.gridTable td {
+    border: 2px solid #333;
+    padding: 10px 12px;
+    vertical-align: middle;
+}
+
+.gridTable thead th {
+    background: #e6e6e6;
+    font-weight: 900;
+    text-align: left;
+}
+
+/* Totals row */
+.totalsRow th {
+    background: #e6e6e6;
+    padding: 14px 12px;
+}
+
+.totalsNum {
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.totalsStack {
+    text-align: center;
+}
+
+.totalsTop {
+    font-size: 22px;
+    font-weight: 900;
+    margin-bottom: 6px;
+}
+
+.totalsBottom {
+    font-size: 22px;
+    font-weight: 900;
+}
+
+/* Right alignment for numeric columns */
+.gridTable td.num,
+.gridTable th.num {
+    text-align: right;
+}
+
+.mono {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+}
+
+.muted {
+    text-align: center;
+    color: #666;
+    padding: 14px;
+}
+
+/* ===== Totals Row (clean white like Excel) ===== */
+
+.totalsRow th {
+    background: #ffffff !important;
+    border: none !important;
+    padding: 12px 14px;
+    vertical-align: middle;
+}
+
+/* remove vertical lines from totals row */
+.totalsRow th:not(:last-child) {
+    border-right: none !important;
+}
+
+/* stack cell (Load Count column) */
+.totalsStack {
+    text-align: right;
+    white-space: nowrap;
+}
+
+/* smaller label */
+.totalsTop {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    white-space: nowrap;
+}
+
+/* value */
+.totalsBottom {
+    font-size: 20px;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+/* numeric totals */
+.totalsNum {
+    font-size: 20px;
+    font-weight: 900;
+    white-space: nowrap;
+}
